@@ -14,8 +14,8 @@ const App = (): JSX.Element => {
     })();
   }, []);
 
-  const loadCharacter = (gentlemenList: CharacterStructure[]): void => {
-    setCharacter(gentlemenList);
+  const loadCharacter = (characterList: CharacterStructure[]): void => {
+    setCharacter(characterList);
   };
 
   return (
