@@ -9,13 +9,13 @@ const App = (): JSX.Element => {
   useEffect(() => {
     (async () => {
       const response = await fetch(`${apiUrl}characters`);
-      const gentlemenApi = (await response.json()) as CharacterStructure[];
-      loadCharacter(gentlemenApi);
+      const characterApi = (await response.json()) as CharacterStructure[];
+      loadCharacter(characterApi);
     })();
   }, []);
 
-  const loadCharacter = (gentlemenList: CharacterStructure[]): void => {
-    setCharacter(gentlemenList);
+  const loadCharacter = (characterList: CharacterStructure[]): void => {
+    setCharacter(characterList);
   };
 
   return (
